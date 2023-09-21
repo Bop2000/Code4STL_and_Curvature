@@ -1,0 +1,4 @@
+trimesh == 3.20.2
+pycork
+scikit-image == 0.19.3
+numpy == 1.19.2
