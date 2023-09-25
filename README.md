@@ -32,6 +32,11 @@ Please run the following line in terminal:
 ```shell
 python Para2stl2curvature.py
 ```
+This code is used to create three kinds of TPMS structures and evaluate the curvature of 3D objects with STL file format.
+This code can print the information on the surface area and volume fraction with your created TPMS structures. 
+To create a TPMS structure with a specific surface area and a specific porosity, you need to change the parameters in such as this line "para=np.array([2.8,0.32])", 
+where 2.8 indicates the unit cell size and 0.32 means the isosurface that controls the porosity of the structure.
+
 
 ## CItation
 
