@@ -1,3 +1,8 @@
+##This code is used to create three kinds of TPMS structures and evaluate the curvature of 3D objects with STL file format.
+##This code can print the information on the surface area and volume fraction with your created TPMS structures. 
+##To create a TPMS structure with a specific surface area and a specific porosity, you need to change the parameters in such as this "para=np.array([2.8,0.32])", 
+##where 2.8 indicates the unit cell size and 0.32 means the isosurface that controls the porosity of the structure.
+
 import trimesh
 from trimesh.curvature import discrete_gaussian_curvature_measure, discrete_mean_curvature_measure, sphere_ball_intersection
 import numpy as np
@@ -96,15 +101,15 @@ def To_stl(para,name):
 
 
 ###sheet-diamond
-para=np.array([2.8,0.32])
+para=np.array([2.8,0.32])#[unit cell size, isovalue]
 name="SD"
 To_stl(para,name)
 ###sheet-gyroid
-para=np.array([2.25,0.47])
+para=np.array([2.25,0.47])#[unit cell size, isovalue]
 name="SG"
 To_stl(para,name)
 ###lattice-gyroid
-para=np.array([1.1,-0.6])
+para=np.array([1.1,-0.6])#[unit cell size, isovalue]
 name="LG"
 To_stl(para,name)
 
