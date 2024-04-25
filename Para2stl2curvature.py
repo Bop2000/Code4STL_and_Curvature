@@ -13,7 +13,7 @@ import pycork
 
 def tpms_D(x,y,z,para):
     #TPMS_Diamond
-    d=abs(np.cos(2*pi*x/para[0])*np.cos(2*pi*y/para[0])*np.cos(2*pi*z/para[0]) + np.sin(2*pi*x/para[0])*np.sin(2*pi*y/para[0])*np.sin(2*pi*z/para[0]) + np.sin(2*pi*x/para[0])*np.cos(2*pi*y/para[0])*np.sin(2*pi*z/para[0]) + np.cos(2*pi*x/para[0])*np.sin(2*pi*y/para[0])*np.sin(2*pi*z/para[0]))-para[1]
+    d=abs(np.cos(2*pi*x/para[0])*np.cos(2*pi*y/para[0])*np.cos(2*pi*z/para[0]) - np.sin(2*pi*x/para[0])*np.sin(2*pi*y/para[0])*np.sin(2*pi*z/para[0]))-para[1]
     return d
 
 def tpms_G(x,y,z,para):
@@ -101,11 +101,11 @@ def To_stl(para,name):
 
 
 ###sheet-diamond
-para=np.array([2.8,0.32])#[unit cell size, isovalue]
+para=np.array([2.8,0.253])#[unit cell size, isovalue]
 name="SD"
 To_stl(para,name)
 ###sheet-gyroid
-para=np.array([2.25,0.47])#[unit cell size, isovalue]
+para=np.array([2.25,0.471])#[unit cell size, isovalue]
 name="SG"
 To_stl(para,name)
 ###lattice-gyroid
